@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working With Your Preferred Vendors | Verandah Properties</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#008C82;--teal-deep:#00625B;--gold:#C9A227;--charcoal:#1A1A1A;--body:#1F1F1F;--muted:#5A5651;--strong:#0F0F0F;--line:#E2DED7;--paper:#FBFAF7;--panel:#F3F1EC;--red:#B5543C;--green:#4E8C6A}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);font-family:'Jost',system-ui,sans-serif;font-weight:400;font-size:16.5px;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal)}
+h1{font-size:2.5rem;line-height:1.1;margin:0 0 .5rem}
+h2{font-size:1.8rem;line-height:1.22;margin:0 0 .85rem}
+h3{font-size:1.15rem;margin:0 0 .4rem}
+p{margin:0 0 1.05rem;max-width:72ch}
+b,strong{font-weight:600;color:var(--strong)}
+ul{margin:0 0 1.05rem;padding-left:1.25rem;max-width:72ch}
+li{margin-bottom:.55rem}
+.mast{background:var(--charcoal);color:#F5F3EE;padding:30px 0 34px}
+.brandline{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.mark{width:33px;height:33px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Cormorant Garamond',serif;font-size:21px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;transform:translateY(5px)}
+.brandname{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F5F3EE}
+.mast .tag{color:#A9A49C;font-size:.83rem;margin-left:auto}
+.kicker{color:var(--gold);font-size:.9rem;margin:24px 0 4px}
+.mast h1{color:#FBFAF7}
+.mast .sub{color:#B8B2A8;margin:0;font-size:1.04rem;max-width:64ch}
+.answer{background:var(--teal);color:#fff;padding:30px 0}
+.answer h2{color:#fff;font-size:1.5rem;margin-bottom:.4rem}
+.answer p{color:#DDEFEC}
+.answer b{color:#fff}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28);border-radius:10px;overflow:hidden;margin-top:18px}
+.three div{background:var(--teal);padding:18px}
+.three div:first-child{background:var(--teal-deep)}
+.three .k{font-size:.78rem;color:#CDE8E5;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.three .v{font-family:'Cormorant Garamond',serif;font-size:1.3rem;line-height:1.25;color:#fff}
+section{padding:36px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+h2 em{font-style:italic;font-weight:400;color:var(--teal-deep)}
+.quote{border-left:4px solid var(--gold);background:#fff;padding:19px 24px;border-radius:0 8px 8px 0;margin:0 0 22px}
+.quote p{font-family:'Cormorant Garamond',serif;font-size:1.24rem;line-height:1.48;margin-bottom:0}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin:0 0 16px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.warn{border-left:4px solid var(--red)}
+.cond{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px 18px 70px;margin:0 0 12px;position:relative}
+.cond .n{position:absolute;left:20px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;font-size:.92rem}
+.cond p{margin:0;font-size:.97rem}
+details{border:1px solid var(--line);border-radius:9px;background:#fff;margin:0 0 12px}
+summary{cursor:pointer;padding:15px 19px;font-weight:600;color:var(--teal-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.45rem;color:var(--gold);line-height:1;flex:0 0 auto}
+details[open] summary::after{content:"\2212"}
+summary:hover{background:var(--panel)}
+.dbody{padding:2px 19px 16px}
+.dbody>*:last-child{margin-bottom:0}
+.tscroll{overflow-x:auto;margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:.93rem;background:#fff;min-width:540px}
+th{background:var(--panel);color:var(--strong);font-weight:600;text-align:left;padding:11px 13px;border-bottom:2px solid var(--line)}
+td{padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th.a{color:var(--green)}th.b{color:var(--red)}
+.ack{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 26px}
+.ack .line{border-bottom:1px solid #BDB7AD;height:30px;margin:18px 0 4px}
+.ack .lbl{font-size:.82rem;color:var(--muted)}
+.ackgrid{display:grid;grid-template-columns:2fr 1fr;gap:0 24px}
+footer{background:var(--charcoal);color:#B8B2A8;padding:30px 0;font-size:.89rem}
+footer .sig{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:8px}
+footer a{color:#8FD2CB}
+@media(max-width:700px){h1{font-size:1.95rem}h2{font-size:1.45rem}.three{grid-template-columns:1fr}.mast .tag{margin-left:0;width:100%}.ackgrid{grid-template-columns:1fr}.cond{padding-left:62px}}
+@media print{body{background:#fff}section{page-break-inside:avoid}summary::after{content:""}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="mark">V</span>
+      <span class="brandname">Verandah Properties, LLC</span>
+      <span class="tag">For Owners</span>
+    </div>
+    <p class="kicker">When you'd like to use a vendor you already know</p>
+    <h1>Working with your<br>preferred vendors</h1>
+    <p class="sub">Many owners have a lawn service, pool company or contractor they trust. Here is how we can work with them, and why the conditions matter.</p>
+  </div>
+</header>
+
+<div class="answer">
+  <div class="wrap">
+    <h2>The short answer</h2>
+    <p>Our standard practice is to work with vendors who have completed Verandah's approval process and operate within our management procedures. <b>We may accommodate an owner-preferred vendor, but that approval is conditional on the vendor meeting the same requirements</b> — and continuing to meet them.</p>
+    <div class="three">
+      <div><div class="k">Our standard</div><div class="v">Verandah-approved vendors</div></div>
+      <div><div class="k">What we may allow</div><div class="v">Yours, on the same conditions</div></div>
+      <div><div class="k">If conditions lapse</div><div class="v">Approval is withdrawn</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <h2>We understand why</h2>
+  <p>You may trust their work, appreciate their pricing, or have a longstanding relationship. Sometimes it's a friend or family member whose business you want to support. Those are reasonable considerations, and we respect them.</p>
+  <p>And sometimes it's about wanting another set of eyes on the property. If that's part of it, please tell us what's on your mind. We would much rather hear a concern directly and address it — including how and when your property is inspected under your management agreement — than have it handled through a vendor.</p>
+</section>
+
+<section>
+  <h2>Why the conditions exist</h2>
+  <p>The reason is simple: to be accountable for managing your property, we need the authority, information and cooperation to do so.</p>
+
+  <div class="quote">
+    <p>A vendor can do excellent work and still be a poor fit for a professionally managed rental if they do not respond to the management team, report problems, or follow agreed procedures.</p>
+  </div>
+
+  <p>For example, a lawn provider might tell you an irrigation problem needs attention. If that information never reaches us, we cannot arrange a repair. A pool company might miss a visit without notifying our team. A contractor might discuss additional work directly with you while we are coordinating a different scope or schedule with the tenant.</p>
+  <p>Everyone may be acting with good intentions, but separate conversations can leave important work delayed, undocumented or misunderstood. <b>You hired us to connect those moving parts.</b> We cannot do that reliably when instructions, updates and decisions bypass the management process.</p>
+
+  <h3 style="margin-top:1.6rem">Where the difference shows up</h3>
+  <p>Our approved vendors know we manage hundreds of properties and that their standing with us depends on how they perform. That relationship is how we get someone out quickly and get a straight answer when something goes wrong. A vendor who works for you, not for us, doesn't carry that same obligation.</p>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>When something goes wrong</th><th class="a">Verandah-approved vendor</th><th class="b">Vendor outside our process</th></tr></thead>
+    <tbody>
+      <tr><td>Who they answer to</td><td>Our team</td><td>You</td></tr>
+      <tr><td>A missed visit</td><td>We know, and we have a backup</td><td>We may not find out</td></tr>
+      <tr><td>A problem at the property</td><td>Reported to us and documented</td><td>May reach you, or no one</td></tr>
+      <tr><td>Your tenant needs a response</td><td>We set the timeline</td><td>We can ask, not require</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <details>
+    <summary>Why reports need to come through us</summary>
+    <div class="dbody">
+      <p>When a vendor reports to you directly, the property has two lines of communication and we are on only one of them. Information arrives incomplete, and when accounts don't line up there is no single record of what was said or agreed.</p>
+      <p>It is the same reason our management agreement routes tenant communication through us. Once there are two sources of direction, no one is fully responsible, and that is where things are missed.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Why every property is held to the same standard</summary>
+    <div class="dbody">
+      <p>We manage hundreds of properties, and the only way to do that well is to run each one the same way — the same review, the same documentation, the same response expectations. Consistent procedures are what make dependable service possible for every owner, including you.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2>Licensed trades and <em>insurance</em></h2>
+  <p>These requirements apply to routine services as well as major repairs. A missed pool visit, an unreported leak or an unresolved lawn issue can become a much larger expense. But for work requiring a trade license — <b>plumbing, electrical, HVAC and roofing</b> — verifying credentials before work begins is especially important.</p>
+  <div class="box warn">
+    <ul>
+      <li><b>Unlicensed work on a licensed trade</b> can create problems with permits, code compliance and resale, and may complicate a related insurance claim.</li>
+      <li><b>An uninsured worker injured at your property</b> can become your exposure rather than theirs.</li>
+      <li><b>Without documentation that the vendor was reviewed and authorized,</b> there is no record the work was done by a qualified, insured professional — which is exactly what is examined when something goes wrong.</li>
+    </ul>
+    <p>Insurance documentation helps us evaluate whether a vendor meets our requirements. It does not guarantee that every possible loss will be covered.</p>
+  </div>
+</section>
+
+<section>
+  <h2>The conditions</h2>
+  <p>For an owner-preferred vendor to work at a Verandah-managed property:</p>
+
+  <div class="cond"><span class="n">1</span><h3>Approval is completed before work begins</h3><p>The vendor completes our onboarding and provides the required business documentation, insurance that meets our requirements, and any license the work requires. An existing relationship with you does not replace this review. Until approval is complete, we cannot authorize or coordinate their services.</p></div>
+
+  <div class="cond"><span class="n">2</span><h3>Verandah remains the operational point of contact</h3><p>Scheduling, access, service updates, estimates, invoices and problem reports go through our team. You remain involved in decisions requiring your approval under the management agreement. If a vendor contacts you about the property, please bring us into that conversation before the work or schedule changes.</p></div>
+
+  <div class="cond"><span class="n">3</span><h3>The vendor communicates and responds</h3><p>They acknowledge requests, confirm appointments, report missed visits or delays, and respond within the timeframe our team sets for the situation. A vendor's availability cannot leave an urgent property issue or tenant need unresolved.</p></div>
+
+  <div class="cond"><span class="n">4</span><h3>The work is defined and documented</h3><p>Recurring services need an agreed scope and schedule. Repairs and larger projects need estimates, authorization and completion documentation — photos, permits or other records where applicable. Additional work or charges follow the approval process.</p></div>
+
+  <div class="cond"><span class="n">5</span><h3>Tenant access is coordinated</h3><p>Vendors follow our access instructions and notice requirements. Direct scheduling with a tenant may be permitted when our team authorizes it, but vendors may not change arrangements independently, make commitments on Verandah's behalf, or involve tenants in owner–management matters.</p></div>
+
+  <div class="cond"><span class="n">6</span><h3>Continued approval depends on continued cooperation</h3><p>Onboarding is the starting point. If a vendor stops responding, misses service, lets required documentation lapse, or repeatedly bypasses our procedures, we may withdraw approval. When necessary, we will arrange an alternative approved provider within the spending and emergency authority set by your management agreement, and request your approval promptly where it's required.</p></div>
+</section>
+
+<section>
+  <h2>What approval does and doesn't mean</h2>
+  <p>Our approval of a vendor is not a guarantee of their workmanship, attendance or results. We remain responsible for performing our management duties under our agreement, but we cannot independently guarantee a contractor's performance or effectively oversee work arranged outside our process.</p>
+  <p>If you'd prefer an arrangement in which your vendor works independently of Verandah, we'll need to discuss whether that is compatible with our management service before any work proceeds.</p>
+  <p>We genuinely try to be accommodating. We've simply learned that arrangements outside the process tend to fail quietly, and the owner is usually the one who bears the cost. We'd rather be clear now than disappoint you later.</p>
+</section>
+
+<section>
+  <h2>How to request <em>a preferred vendor</em></h2>
+  <p>This only applies if you'd like us to use a vendor you've chosen. If you're happy with Verandah's approved vendors, there's nothing you need to do.</p>
+
+  <div class="cond"><span class="n">1</span><h3>Tell us before making arrangements</h3><p>Send your vendor's company name and contact information to our team. Please don't schedule work with them directly first.</p></div>
+  <div class="cond"><span class="n">2</span><h3>Sign a short request form</h3><p>We'll send you a one-page Owner-Preferred Vendor Request &amp; Acknowledgment covering that vendor and service. It summarizes the conditions on this page.</p></div>
+  <div class="cond"><span class="n">3</span><h3>We contact the vendor</h3><p>We explain our requirements and send them our onboarding. They provide their business documentation, insurance and any required license.</p></div>
+  <div class="cond"><span class="n">4</span><h3>We confirm approval</h3><p>Once onboarding is complete and on file, we'll let you know the vendor is approved for your property. Work can be scheduled from that point.</p></div>
+
+  <p style="margin-top:22px">Our purpose is to protect your investment, provide dependable service to your tenant, and keep responsibilities clear. We value your trust and want your preferred relationships to succeed within a process that allows us to manage your property well.</p>
+  <p>Questions? Call us at <a href="tel:4078550331">407-855-0331</a>.</p>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="sig">Curating Orlando's Finest Rental Portfolio</div>
+    <p><b>Verandah Properties, LLC</b> · License CQ1048619 · <a href="tel:4078550331">407-855-0331</a></p>
+    <p style="font-size:.84rem;color:#8C877F;max-width:72ch">This guide summarizes Verandah's practice and does not replace or amend your Property Management Agreement. Where they differ, the agreement governs. General information only; not legal or insurance advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
